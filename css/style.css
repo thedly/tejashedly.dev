@@ -183,8 +183,15 @@ header .content {
     background-color: transparent;
 }
 
-
-
+.badges {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem;
+    width: 100%;
+}
+#Certifications img {
+    width: 15rem;
+}
 
 
 footer{
