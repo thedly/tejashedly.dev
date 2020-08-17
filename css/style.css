@@ -1,35 +1,40 @@
-*{
+* {
     box-sizing: border-box;
-    margin:0;
+    margin: 0;
     padding: 0;
 }
-html{
+
+html {
     font-size: 10px;
     scroll-behavior: smooth;
 }
-body{
+
+body {
     background-color: var(--primary-background-color);
     font-family: var(--default-font);
     color: var(--secondary-text-color);
 }
 
-.navbar .nav-items ul{
+.navbar .nav-items ul {
     list-style: none;
     display: flex;
     justify-content: flex-end;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--secondary-text-color);
     font-size: 1.6rem;
 }
 
+
 /* ======================================================================== */
+
 img {
     width: 100%;
 }
-header{
+
+header {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -41,7 +46,7 @@ header * {
     z-index: 0;
 }
 
-.navbar{
+.navbar {
     display: flex;
     top: 0;
     align-items: center;
@@ -49,137 +54,123 @@ header * {
     padding: 1rem 1rem;
 }
 
-
-.navbar a{
+.navbar a {
     padding: 1rem 1rem;
     color: var(--primary-text-color);
     font-size: 2.5rem;
     cursor: pointer;
     border-radius: 1rem;
 }
-.navbar a:hover{
+
+.navbar a:hover {
     color: var(--secondary-text-color);
-    
 }
 
-.navbar .logo
-{
+.navbar .logo {
     width: 3rem;
     height: 3rem;
     padding: 1rem;
     background: url("../Images/logo.png") no-repeat center center/contain;
 }
 
-.navbar-transform{
+.navbar-transform {
     width: 100%;
     position: fixed;
-    
 }
 
 header .content {
     height: 100%;
 }
 
-
-.content .avatar{
+.content .avatar {
     background: url('../Images/avatar.jpg') no-repeat center center /cover;
     width: 13rem;
     height: 26rem;
 }
-.content .profile-header{
+
+.content .profile-header {
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     height: 80%;
     padding: 2rem;
 }
 
-.content .profile-header h1, .content .profile-header .sub-heading{
+.content .profile-header h1,
+.content .profile-header .sub-heading {
     color: var(--primary-text-color);
 }
 
-.about{
+.move-up {
+    position: fixed;
+    z-index: 10;
+    font-size: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.about {
     padding: 5rem 0;
     position: relative;
     background-color: var(--secondary-background-color);
     z-index: -1;
 }
 
-.about .content{
+.about .content {
     padding: 5rem 0 8rem 0;
     font-size: 2rem;
     color: white;
 }
 
-.competencies{
+.competencies {
     /* border: thin var(--primary-background-color) solid; */
     padding: 2rem 0;
     border-radius: 2rem;
     background-color: #F5F5F5;
-    box-shadow:0.5rem 0.5rem 1rem #C4C4C4;
+    box-shadow: 0.5rem 0.5rem 1.5rem #333;
     margin-top: -5rem;
     justify-content: start;
 }
 
-.competencies .competency-list{
+.competencies .competency-list {
     display: flex;
-    
 }
 
-.competencies .competency-list ul{
+.competencies .competency-list ul {
     padding: 0rem 5rem 0 5rem;
     font-size: 1.5rem;
     text-align: left;
     list-style-type: "►";
 }
 
-.competencies .competency-list ul li{
+.competencies .competency-list ul li {
     padding: 0 1rem;
 }
 
 #experience {
     margin-top: 5rem;
-    text-align: center;   
-}
-.blocks{
-    display: grid;
-    grid-template: 
-    'block block'
-    'block block'
-    ;
-    gap:1rem;
-}
-
- .block{
-    grid-template-areas: block;
-    padding: 3rem;
-    text-align: left;
-    font-size: 1.5rem;
+    position: relative;
+    text-align: center;
 }
 
 #experience {
     padding: 1rem;
 }
 
-#experience #co1{
-    background: #8FD8D2;
-    opacity:0.8;
-}
-#experience #co2{
-    background: #FEDCD2;
-    opacity:0.8;
-}
-#experience #co3{
-    background: #DF744A;
-    opacity:0.8;
-}
-#experience #co4{
-    background: #DCB239;
-    opacity:0.8;
+.partition {
+    position: absolute;
+    width: 1rem;
+    z-index: -1;
+    height: 95%;
+    background: #333;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.contact-form{
+.contact-form {
     background-color: transparent;
 }
 
@@ -189,12 +180,12 @@ header .content {
     padding: 2rem;
     width: 100%;
 }
+
 #Certifications img {
     width: 15rem;
 }
 
-
-footer{
+footer {
     display: flex;
     margin-top: 1rem;
     flex-direction: column;
@@ -211,11 +202,11 @@ footer section {
     padding: 3rem 0;
 }
 
-footer .social{
+footer .social {
     display: flex;
 }
 
-footer .copyright{
+footer .copyright {
     font-size: 1.1rem;
 }
 
@@ -224,21 +215,18 @@ footer .social a {
     border-radius: 50%;
     padding: 1rem 1rem;
     font-size: 3rem;
-    width:6.2rem;
+    width: 6.2rem;
     border: thin white solid;
     color: white
 }
 
-.contact-form{
+.contact-form {
     width: 100%;
     height: 20rem;
 }
 
-footer section.logo
-{
+footer section.logo {
     width: 3rem;
     height: 3rem;
     background: url("../Images/logo-light.png") no-repeat center center/contain;
 }
-
-
