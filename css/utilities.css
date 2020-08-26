@@ -2,7 +2,9 @@
     --primary-background-color: white;
     --secondary-background-color: #E85A4F;
     --tertiary-background-color: #F0958E;
+    --blue-background-color: #000066;
     --dark-background-color: #E05D19;
+    --light-grey-color: #ccc;
     --primary-text-color: #E85A4F;
     --secondary-text-color: #333;
     --tertiary-text-color: #E98074;
@@ -54,57 +56,188 @@ ul {
 .blocks {
     display: flex;
     flex-direction: column;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEElEQVQYV2NkQAOMJAs8AwAB1ADrjxfx1wAAAABJRU5ErkJggg==");
+    background-repeat: repeat;
+    padding: 5rem 0rem;
 }
 
-.block-pointer-left {
+
+/* .block-pointer-left {
     width: 0;
     height: 0;
     border-right: 2rem solid transparent;
-}
+} */
 
-.block-pointer-right {
+
+/* .block-pointer-right {
     width: 0;
     height: 0;
     border-left: 2rem solid transparent;
-}
+} */
 
-.block:nth-of-type(even) {
+.right-block {
     justify-content: flex-end;
 }
 
-.block:nth-of-type(odd) {
+.left-block {
     justify-items: flex-start;
+}
+
+.left-block .block-content::before {
+    content: '';
+    position: absolute;
+    border-right-style: dashed;
+    border-top-style: dashed;
+    border-right-width: thick;
+    border-top-width: thick;
+    border-right-color: var(--blue-background-color);
+    border-top-color: var(--blue-background-color);
+    width: 30%;
+    height: 30%;
+    border-radius: 0.5rem;
+    margin-left: 100%;
+    top: 80%;
+    z-index: -1;
+}
+
+.right-block .block-content::before {
+    content: '';
+    position: absolute;
+    border-left-style: dashed;
+    border-top-style: dashed;
+    border-left-width: thick;
+    border-top-width: thick;
+    border-left-color: var(--blue-background-color);
+    border-top-color: var(--blue-background-color);
+    width: 30%;
+    height: 30%;
+    border-radius: 0.5rem;
+    margin-left: -100%;
+    z-index: -1;
+    top: 80%;
+}
+
+.no-connector .block-content::before {
+    content: '';
+    display: none;
 }
 
 .block-pointer-left,
 .block-pointer-right {
-    border-top: 2rem solid #ccc;
+    border-top: 2rem solid var(--blue-background-color);
 }
 
 .block {
     display: flex;
-    width: 100%;
     font-size: 1.5rem;
-    border-top: 1rem white dotted;
+    position: relative;
+    max-width: 96rem;
+    margin-left: auto;
+    margin-right: auto;
+    /* border-top: 1rem white dotted; */
+    margin-bottom: 3rem;
 }
 
 .block .block-content {
-    background: #ccc;
-    width: 45%;
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
+    display: flex;
+    background: var(--primary-background-color);
+    border: thin var(--blue-background-color) solid;
+    color: var(--blue-background-color);
+    width: 60%;
+    position: relative;
+    border-radius: 0.5rem;
 }
 
-.block:nth-of-type(even) .block-content {
-    border-top-right-radius: 0.5rem;
+.right-block .block-content {
+    position: relative;
+    flex-direction: row-reverse;
 }
 
-.block:nth-of-type(odd) .block-content {
-    border-top-left-radius: 0.5rem;
+.left-block .block-content {
+    position: relative;
 }
+
+
+/* .left-block .block-content::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 2rem solid transparent;
+    border-top: 2rem solid var(--blue-background-color);
+    margin-left: 51%;
+} */
+
+
+/* .right-block .block-content::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 2rem solid transparent;
+    border-top: 2rem solid var(--blue-background-color);
+    margin-left: -54%;
+} */
 
 .block .block-content ul {
     list-style: disc;
     padding: 0rem 3rem;
     padding-bottom: 2rem;
 }
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.competency-icons {
+    font-size: 5rem;
+    padding: 2rem;
+}
+
+.partition {
+    position: absolute;
+    width: 1rem;
+    z-index: -1;
+    height: 95%;
+    background: var(--blue-background-color);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+}
+
+.block::before {
+    content: '';
+    position: absolute;
+    height: 1rem;
+    z-index: -1;
+    width: 10%;
+    background: var(--blue-background-color);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: -1;
+    margin-top: 1%;
+}
+
+
+/* .sub-partition .dot {
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+    background: var(--primary-background-color);
+} */

@@ -129,49 +129,87 @@ header .content {
     border-radius: 2rem;
     background-color: #F5F5F5;
     box-shadow: 0.5rem 0.5rem 1.5rem #333;
-    margin-top: -5rem;
-    justify-content: start;
+    margin-top: -7rem;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .competencies .competency-list {
     display: flex;
+    width: 100%;
+}
+
+.competencies .competency-list .column {
+    flex: 1;
+}
+
+.competencies .competency-list .column:nth-child(even) {
+    border-right: thin var(--light-grey-color) solid;
+    border-left: thin var(--light-grey-color) solid;
 }
 
 .competencies .competency-list ul {
     padding: 0rem 5rem 0 5rem;
     font-size: 1.5rem;
-    text-align: left;
-    list-style-type: "►";
+    text-align: center;
+    list-style-type: none;
 }
 
 .competencies .competency-list ul li {
-    padding: 0 1rem;
+    padding: 1rem 0rem;
 }
 
 #experience {
     margin-top: 5rem;
     position: relative;
     text-align: center;
-}
-
-#experience {
+    margin-bottom: 10rem;
     padding: 1rem;
 }
 
-.partition {
-    position: absolute;
-    width: 1rem;
-    z-index: -1;
-    height: 95%;
-    background: #333;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+#experience h3 {
+    background-color: var(--primary-background-color);
+    width: 100%;
+    margin-bottom: 2rem;
 }
 
+
+/* #experience::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+} */
+
 .contact-form {
-    background-color: transparent;
+    color: var(--primary-background-color);
+    background-color: var(--blue-background-color);
+    padding: 2rem 0rem;
+    width: 100%;
+}
+
+.contact-form input[type=text] {
+    width: 100%;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.contact-form label {
+    font-size: 2rem;
+}
+
+.contact-form textarea {
+    width: 100%;
+    resize: none;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
 }
 
 .badges {
@@ -181,13 +219,16 @@ header .content {
     width: 100%;
 }
 
+#Certifications {
+    margin-bottom: 5rem;
+}
+
 #Certifications img {
     width: 15rem;
 }
 
 footer {
     display: flex;
-    margin-top: 1rem;
     flex-direction: column;
     width: 100%;
     padding: 1rem;
@@ -218,11 +259,6 @@ footer .social a {
     width: 6.2rem;
     border: thin white solid;
     color: white
-}
-
-.contact-form {
-    width: 100%;
-    height: 20rem;
 }
 
 footer section.logo {
