@@ -56,7 +56,7 @@ ul {
 .blocks {
     display: flex;
     flex-direction: column;
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEElEQVQYV2NkQAOMJAs8AwAB1ADrjxfx1wAAAABJRU5ErkJggg==");
+    /* background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEElEQVQYV2NkQAOMJAs8AwAB1ADrjxfx1wAAAABJRU5ErkJggg=="); */
     background-repeat: repeat;
     padding: 5rem 0rem;
 }
@@ -80,10 +80,11 @@ ul {
 }
 
 .left-block {
-    justify-items: flex-start;
+    justify-content: flex-end;
 }
 
-.left-block .block-content::before {
+
+/* .left-block .block-content::before {
     content: '';
     position: absolute;
     border-right-style: dashed;
@@ -112,15 +113,16 @@ ul {
     width: 30%;
     height: 30%;
     border-radius: 0.5rem;
-    margin-left: -100%;
+    margin-left: -30%;
     z-index: -1;
     top: 80%;
-}
+} */
 
-.no-connector .block-content::before {
+
+/* .no-connector .block-content::before {
     content: '';
     display: none;
-}
+} */
 
 .block-pointer-left,
 .block-pointer-right {
@@ -135,103 +137,110 @@ ul {
     margin-left: auto;
     margin-right: auto;
     /* border-top: 1rem white dotted; */
-    margin-bottom: 3rem;
+}
+
+.seperator {
+    display: flex;
+    justify-content: space-between;
+    max-width: 96rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    align-items: center;
+}
+
+.seperator .hr {
+    color: var(--blue-background-color);
+    background: var(--blue-background-color);
+    width: 88%;
+    height: 0.005rem;
+}
+
+
+/* .block .block-content .hr {
+    width: 0.2rem;
+    height: 80%;
+    background: var(--light-grey-color);
+    position: absolute;
+    align-self: flex-start;
+} */
+
+.seperator .node {
+    border-radius: 50%;
+    width: 10%;
+    height: 9rem;
+    font-size: 5rem;
+}
+
+.seperator .node>img {
+    vertical-align: middle;
+    justify-items: center;
 }
 
 .block .block-content {
     display: flex;
-    background: var(--primary-background-color);
-    border: thin var(--blue-background-color) solid;
+    flex-direction: column;
+    /* background: var(--primary-background-color); */
+    /* border: thin var(--blue-background-color) solid; */
     color: var(--blue-background-color);
-    width: 60%;
+    width: 95%;
     position: relative;
-    border-radius: 0.5rem;
+    /* border-radius: 0.5rem; */
+    border-left: 0.3rem var(--blue-background-color) solid;
+    padding-left: 5rem;
 }
 
-.right-block .block-content {
-    position: relative;
-    flex-direction: row-reverse;
+.block .block-content h4 {
+    font-size: 2.5rem;
+    padding: 1rem 0rem;
+    align-self: flex-start;
 }
 
-.left-block .block-content {
-    position: relative;
+.block .block-content h5 {
+    font-size: 1.5rem;
+    align-self: flex-start;
 }
-
-
-/* .left-block .block-content::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-right: 2rem solid transparent;
-    border-top: 2rem solid var(--blue-background-color);
-    margin-left: 51%;
-} */
-
-
-/* .right-block .block-content::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 2rem solid transparent;
-    border-top: 2rem solid var(--blue-background-color);
-    margin-left: -54%;
-} */
 
 .block .block-content ul {
+    padding: 1.5rem;
+    padding-left: 6.5rem;
     list-style: disc;
-    padding: 0rem 3rem;
-    padding-bottom: 2rem;
 }
 
-.form-group {
+.block .block-content .company-header {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 2rem;
 }
 
-.btn {
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    width: 100%;
+.block .block-content .company-logo {
+    width: 10rem;
+    height: 10rem;
+}
+
+.block .block-content .company-date {
+    align-self: center;
+}
+
+#co1 .company-logo {
+    background: url('../Images/company-logos/tbi.png') no-repeat center center/contain
+}
+
+#co2 .company-logo {
+    background: url('../Images/company-logos/Slk.jpg') no-repeat center center/contain
+}
+
+#co3 .company-logo {
+    background: url('../Images/company-logos/HARMAN-logo.png') no-repeat center center/contain
+}
+
+#co4 .company-logo {
+    background: url('../Images/company-logos/achumen_1.png') no-repeat center center/contain
 }
 
 .competency-icons {
     font-size: 5rem;
     padding: 2rem;
-}
-
-.partition {
-    position: absolute;
-    width: 1rem;
-    z-index: -1;
-    height: 95%;
-    background: var(--blue-background-color);
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 1rem;
-}
-
-.block::before {
-    content: '';
-    position: absolute;
-    height: 1rem;
-    z-index: -1;
-    width: 10%;
-    background: var(--blue-background-color);
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 1rem;
-    display: flex;
-    justify-content: space-between;
-    z-index: -1;
-    margin-top: 1%;
 }
 
 
