@@ -17,6 +17,7 @@ body {
     background-color: var(--background-color);
     height: 100%;
     font-family: var(--default-font);
+
 }
 
 .content .profile-header h1,
@@ -76,11 +77,23 @@ header * {
     color: var(--secondary-text-color);
 }
 
+
 .navbar .logo {
     width: 4rem;
-    height: 3rem;
-    padding: 1rem;
-    background: url("../Images/logo.png") no-repeat center center/contain;
+    height: 4rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+
+}
+.navbar .logo.on {
+    background-color: rgba(255, 255, 0, 0.9);
+    box-shadow: 1px 1px 100px 30px #ffff00;
+}
+
+
+.navbar .logo img {
+    height: 4rem;
+    width: auto;
 }
 
 .navbar-transform {

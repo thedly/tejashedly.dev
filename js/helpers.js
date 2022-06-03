@@ -26,9 +26,11 @@ $(function(){
 function set_dark() {
     $("body").css({"background-color": "rgba(0,27,58, 0.7)"})
     $(".content .profile-header h1,.content .profile-header .sub-heading, .content .learn p").css({"color": "#FFFFFF"})
+    $(".navbar .logo").addClass("on")
 }
 
 function set_light(){
     $("body").css({"background-color": "rgba(255,255,255, 0.3)"})
     $(".content .profile-header h1,.content .profile-header .sub-heading, .content .learn p").css({"color": "#000000"})
+    $(".navbar .logo").removeClass("on")
 }
