@@ -137,10 +137,10 @@ header .content {
 .footer {
     display: flex;
     justify-content: center;
-
 }
 
 .footer img {
-    height: 4.5rem;
+    height: 3.5rem;
     width: auto;
+    margin: 0px 3px 0px 3px;
 }
