@@ -19,10 +19,4 @@ jobs:
         aws-region: ${{ secrets.S3_BUCKET_REGION }}
 
     - name: Deploy static site to S3 bucket
-      run: | 
-        ls
-        aws s3 sync index.html s3://${{ secrets.S3_BUCKET }}/index.html --delete
-        aws s3 sync Resume.pdf s3://${{ secrets.S3_BUCKET }}/Resume.pdf --delete
-        aws s3 sync css/* s3://${{ secrets.S3_BUCKET }}/css/* --delete
-        aws s3 sync js/* s3://${{ secrets.S3_BUCKET }}/js/* --delete
-        aws s3 sync Images/* s3://${{ secrets.S3_BUCKET }}/Images/* --delete
+      run: aws s3 sync . s3://${{ secrets.S3_BUCKET }} --delete
