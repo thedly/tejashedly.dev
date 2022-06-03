@@ -21,7 +21,8 @@ jobs:
     - name: Deploy static site to S3 bucket
       run: | 
         ls
-        aws s3 sync ./index.html s3://${{ secrets.S3_BUCKET }}/index.html --delete
-        aws s3 sync ./css/* s3://${{ secrets.S3_BUCKET }}/css/* --delete
-        aws s3 sync ./js/* s3://${{ secrets.S3_BUCKET }}/js/* --delete
-        aws s3 sync ./images/* s3://${{ secrets.S3_BUCKET }}/images/* --delete
+        aws s3 sync index.html s3://${{ secrets.S3_BUCKET }}/index.html --delete
+        aws s3 sync Resume.pdf s3://${{ secrets.S3_BUCKET }}/Resume.pdf --delete
+        aws s3 sync css/* s3://${{ secrets.S3_BUCKET }}/css/* --delete
+        aws s3 sync js/* s3://${{ secrets.S3_BUCKET }}/js/* --delete
+        aws s3 sync Images/* s3://${{ secrets.S3_BUCKET }}/Images/* --delete
