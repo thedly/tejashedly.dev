@@ -2,8 +2,8 @@
     --primary-background-color: white;
     --secondary-background-color: #E85A4F;
     --tertiary-background-color: #F0958E;
-    --dark-background-color: #E05D19;
-    --primary-text-color: #E85A4F;
+    --dark-background-color: rgba(0,27,58, 0.7);
+    --primary-text-color: #FFFFFF;
     --secondary-text-color: #333;
     --tertiary-text-color: #E98074;
     /* --default-font: 'Roboto', sans-serif; */
@@ -49,62 +49,4 @@ ul {
     text-align: center;
     max-width: 96rem;
     margin: auto;
-}
-
-.blocks {
-    display: flex;
-    flex-direction: column;
-}
-
-.block-pointer-left {
-    width: 0;
-    height: 0;
-    border-right: 2rem solid transparent;
-}
-
-.block-pointer-right {
-    width: 0;
-    height: 0;
-    border-left: 2rem solid transparent;
-}
-
-.block:nth-of-type(even) {
-    justify-content: flex-end;
-}
-
-.block:nth-of-type(odd) {
-    justify-items: flex-start;
-}
-
-.block-pointer-left,
-.block-pointer-right {
-    border-top: 2rem solid #ccc;
-}
-
-.block {
-    display: flex;
-    width: 100%;
-    font-size: 1.5rem;
-    border-top: 1rem white dotted;
-}
-
-.block .block-content {
-    background: #ccc;
-    width: 45%;
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-}
-
-.block:nth-of-type(even) .block-content {
-    border-top-right-radius: 0.5rem;
-}
-
-.block:nth-of-type(odd) .block-content {
-    border-top-left-radius: 0.5rem;
-}
-
-.block .block-content ul {
-    list-style: disc;
-    padding: 0rem 3rem;
-    padding-bottom: 2rem;
 }

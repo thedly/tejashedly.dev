@@ -5,12 +5,17 @@
 }
 
 html {
-    font-size: 10px;
+    background: linear-gradient(rgba(255,255,255,.84), rgba(255,255,255,.84)), url("../Images/brickwall.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--primary-background-color);
+    background: var(--dark-background-color);
+    height: 100%;
     font-family: var(--default-font);
     color: var(--secondary-text-color);
 }
@@ -19,6 +24,10 @@ body {
     list-style: none;
     display: flex;
     justify-content: flex-end;
+}
+
+.navbar .nav-items i {
+    font-size: 3rem;
 }
 
 a {
@@ -38,8 +47,6 @@ header {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    /* background: url(../Images/profile_wide.jpg) no-repeat center bottom /cover; */
-    /* background-attachment: fixed; */
 }
 
 header * {
@@ -67,7 +74,7 @@ header * {
 }
 
 .navbar .logo {
-    width: 3rem;
+    width: 4rem;
     height: 3rem;
     padding: 1rem;
     background: url("../Images/logo.png") no-repeat center center/contain;
@@ -79,19 +86,26 @@ header * {
 }
 
 header .content {
+    display: flex;
     height: 100%;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+
 }
 
 .content .avatar {
-    background: url('../Images/avatar.jpg') no-repeat center center /cover;
-    width: 13rem;
-    height: 26rem;
+    background: url('../Images/profile_picture.jpg') no-repeat center center /cover;
+    width: 11rem;
+    height: 12rem;
+    border-radius: 7rem;
+
 }
 
 .content .profile-header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 80%;
     padding: 2rem;
@@ -102,131 +116,31 @@ header .content {
     color: var(--primary-text-color);
 }
 
-.move-up {
-    position: fixed;
-    z-index: 10;
+.content .sub-heading {
+    font-size: 1rem;
+}
+.content h1 {
     font-size: 2rem;
-    right: 2rem;
-    bottom: 2rem;
 }
 
-.about {
-    padding: 5rem 0;
-    position: relative;
-    background-color: var(--secondary-background-color);
-    z-index: -1;
-}
-
-.about .content {
-    padding: 5rem 0 8rem 0;
-    font-size: 2rem;
-    color: white;
-}
-
-.competencies {
-    /* border: thin var(--primary-background-color) solid; */
-    padding: 2rem 0;
-    border-radius: 2rem;
-    background-color: #F5F5F5;
-    box-shadow: 0.5rem 0.5rem 1.5rem #333;
-    margin-top: -5rem;
-    justify-content: start;
-}
-
-.competencies .competency-list {
+.content .learn {
     display: flex;
-}
-
-.competencies .competency-list ul {
-    padding: 0rem 5rem 0 5rem;
-    font-size: 1.5rem;
-    text-align: left;
-    list-style-type: "►";
-}
-
-.competencies .competency-list ul li {
-    padding: 0 1rem;
-}
-
-#experience {
-    margin-top: 5rem;
-    position: relative;
-    text-align: center;
-}
-
-#experience {
-    padding: 1rem;
-}
-
-.partition {
-    position: absolute;
-    width: 1rem;
-    z-index: -1;
-    height: 95%;
-    background: #333;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.contact-form {
-    background-color: transparent;
-}
-
-.badges {
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 2rem;
-    width: 100%;
-}
-
-#Certifications img {
-    width: 15rem;
-}
-
-footer {
-    display: flex;
-    margin-top: 1rem;
     flex-direction: column;
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--secondary-background-color);
-    color: white;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    align-self: center;
+    max-width: 600px;
 }
 
-footer section {
-    padding: 3rem 0;
+.content .learn p {
+    color: var(--primary-text-color);
 }
 
-footer .social {
+.footer {
     display: flex;
+    justify-content: center;
+
 }
 
-footer .copyright {
-    font-size: 1.1rem;
-}
-
-footer .social a {
-    margin: 1rem;
-    border-radius: 50%;
-    padding: 1rem 1rem;
-    font-size: 3rem;
-    width: 6.2rem;
-    border: thin white solid;
-    color: white
-}
-
-.contact-form {
-    width: 100%;
-    height: 20rem;
-}
-
-footer section.logo {
-    width: 3rem;
-    height: 3rem;
-    background: url("../Images/logo-light.png") no-repeat center center/contain;
+.footer img {
+    height: 4.5rem;
+    width: auto;
 }
