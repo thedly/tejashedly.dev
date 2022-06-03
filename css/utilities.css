@@ -7,7 +7,7 @@
     --secondary-text-color: #333;
     --tertiary-text-color: #E98074;
     /* --default-font: 'Roboto', sans-serif; */
-    --default-font: 'Open Sans', sans-serif;
+    --default-font: 'Source Code Pro', monospace;
 }
 
 h1 {
