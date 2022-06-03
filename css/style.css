@@ -106,6 +106,7 @@ header .content {
 }
 .content .resume {
     font-size: 5rem;
+    color: green;
     margin-top: 20px;
 }
 
