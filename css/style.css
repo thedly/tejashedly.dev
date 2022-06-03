@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    background: var(--background-color);
+    background-color: var(--background-color);
     height: 100%;
     font-family: var(--default-font);
 }
@@ -103,6 +103,10 @@ header .content {
     height: 12rem;
     border-radius: 7rem;
 
+}
+.content .resume {
+    font-size: 5rem;
+    margin-top: 20px;
 }
 
 .content .profile-header {
