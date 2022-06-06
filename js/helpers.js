@@ -24,9 +24,9 @@ $(function(){
 })
 
 function set_dark() {
-    $("body, .navbar .logo, .navbar .logo img, .content .profile-header h1,.content .profile-header .sub-heading, .content .learn p, .content .resume-text, .copyrights, .navbar .logo-wrap").addClass("on")
+    $("body, .navbar .logo, .navbar .logo img, .content .profile-header h1,.content .profile-header .sub-heading, .content .learn p, .content .resume-text, .copyrights, .navbar .logo-wrap,.content .avatar").addClass("on")
 }
 
 function set_light(){
-    $("body, .navbar .logo, .navbar .logo img, .content .profile-header h1,.content .profile-header .sub-heading, .content .learn p,.content .resume-text, .copyrights, .navbar .logo-wrap").removeClass("on")
+    $("body, .navbar .logo, .navbar .logo img, .content .profile-header h1,.content .profile-header .sub-heading, .content .learn p,.content .resume-text, .copyrights, .navbar .logo-wrap, .content .avatar").removeClass("on")
 }

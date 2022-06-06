@@ -1,8 +1,8 @@
 :root {
     --background-color: rgba(255,255,255, 0.3);
     --dark-background-color: rgba(0,27,58, 0.7);
-    --text-color: #FFFFFF;
-    --dark-text-color: #000000;
+    --text-color: #ecf0f1;
+    --dark-text-color: #2c3e50;
     /* --default-font: 'Roboto', sans-serif; */
     --default-font: 'Source Code Pro', monospace;
 }
