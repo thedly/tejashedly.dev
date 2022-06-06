@@ -20,11 +20,12 @@
 <body>
     <header id="header">
         <div class="navbar">
-            <div class="logo"><img src="Images/Logo.png"/></div>
+            <div class="logo-wrap"><div class="logo"></div></div>
             <div class="nav-items">
                 <ul>
-                    <li><label class="switch">
-                          <input id="switch-theme" type="checkbox" checked>
+                    <li>
+                        <label class="switch">
+                          <input id="switch-theme" type="checkbox">
                           <span class="slider round"></span>
                         </label>
                     </li>
@@ -36,14 +37,15 @@
 
         <div class="content">
             <div class="profile-header">
-                <div class="avatar"></div>
+                <div class="avatar"><img src="Images/profile_picture.jpg" /></div>
                 <h1>Tejas Hedly</h1>
                 <p class="sub-heading">I am a software developer from Bengaluru, India.</p>
-                <a title="Download Resume.pdf" href="Resume.pdf" target="_blank"><i class="resume fas fa-solid fa-file-pdf"></i></i></a>
+                <a title="Download Resume.pdf" href="Resume.pdf" target="_blank"><i class="resume fas fa-solid fa-file-pdf"></i></a>
+                <p class="resume-text">Resume</p>
 
             </div>
             <div class="learn">
-                <p>What did i learn today ?</p>
+                <p>What did I learn today ?</p>
                 <p>CSS flex is awesome for aligning elements on the html markup</p>
             </div>
 
@@ -56,6 +58,8 @@
         <a href="https://github.com/thedly" target="_blank"><img src="https://github-profile-icons.s3.ap-south-1.amazonaws.com/github-full.png" alt="Github"/></a>
         <a href="https://www.credly.com/users/tejas-hedly.c22ec1d0/badges" target="_blank"><img src="https://github-profile-icons.s3.ap-south-1.amazonaws.com/Credly.webp" alt="Github"/></a>
     </div>
+        <br/>
+        <p class="copyrights">Handcrafted by me &#169; <script>document.write(/\d{4}/.exec(Date())[0])</script></p>
     </header>
 
 </body>
