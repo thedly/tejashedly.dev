@@ -86,7 +86,7 @@ header {
 header .content {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
+    max-width: 400px;
     justify-content: space-between;
 }
 
