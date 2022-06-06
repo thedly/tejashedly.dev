@@ -118,17 +118,7 @@ header .content {
 
 }
 
-.content .avatar {
- width: 12rem;
- height: 12rem;
- border-radius: 7rem;
- background-image: url("../Images/profile_picture.jpg");
- background-repeat: no-repeat;
- background-position: center center;
- background-size: cover;
- border: 2px #f4f0ec solid;
-}
-.content .avatar.on {
+.content .avatar img.on {
     border: 2px #95a5a6 solid;
     transition: 0.5;
 }
@@ -137,6 +127,7 @@ header .content {
     width: 12rem;
     height: 12rem;
     border-radius: 7rem;
+    border: 2px #f4f0ec solid;
 }
 
 
